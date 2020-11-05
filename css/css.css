@@ -717,3 +717,37 @@ li:nth-of-type(odd) {
   cursor: pointer;
   text-decoration: underline;
 }
+.center-block{
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0);
+  position:fixed;
+  bottom:50%;
+  right:50%;
+  transform:translate(-50%, -50%);
+  right:0;
+  transform:translate(0, -50%);
+  transition: all 0.5s;
+}
+.footer{
+  height: 50px;
+  background: rgba(0, 0, 230, .2);
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  /* opacity: 0.2; */
+}
+.footer:hover .center-block{
+  right:50%;
+  background: rgba(0, 0, 0, .7);
+  transform:translate(50%, 0);
+  bottom: 0;
+}
+.footer .center-block:hover{
+  background: rgba(0, 0, 0, 0.1);
+}
+.right-content{
+  width: 250px;
+  border-right: 1px solid #d3d3d3;
+  background: #fff;
+}
