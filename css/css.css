@@ -657,11 +657,22 @@ li {
   line-height: 32px;
   display: flex;
   justify-content: space-between;
+  position: relative;
+}
+.list-cose>p{
+  display: inline-block;
+  width: 170px;
+  height: 32px;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap;
 }
 .show {
   display: none;
   /* float: right; */
   width: 82px;
+  position: absolute;
+  right: 0;
 }
 .show > img {
   width: 17px;
@@ -669,15 +680,22 @@ li {
   vertical-align: middle;
   margin-right: 5px;
 }
-li > p:hover {
+li:hover{
+  cursor: pointer;
+}
+.list-cose > p:hover {
   cursor: pointer;
   text-decoration: underline;
+  display: inline-block;
+  width: 100px;
 }
 .show:hover {
-  cursor: pointer;
+  cursor: pointer; 
 }
-/* li>p:hover+.show{兄弟关系显示
-  display: block; }*/
+/* .list-cose:hover + .show{
+  兄弟关系显示
+  display: block; 
+} */
 
 li {
   background: #e9e8e8;
@@ -688,6 +706,9 @@ li:nth-child(2n){
 li:hover .show {
   /* 父子关系显示 */
   display: block;
+}
+li:hover p {
+  width: 100px;
 }
 
 li:nth-of-type(odd) {
